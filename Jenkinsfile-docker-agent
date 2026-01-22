@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'maven:3.9.12-amazoncorretto-17-alpine' }
+        docker { 
+            image 'maven:3.9.12-amazoncorretto-17-alpine'
+            label 'linux'
+        }
     }
     stages {
         stage('Build Application') {
